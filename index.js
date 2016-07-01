@@ -21,4 +21,5 @@ app.use(serve(path.join(__dirname, 'build')));
 
 app.listen(3000);
 console.log('listening on port 3000');
-//http://wwsun.github.io/
+// http://wwsun.github.io/
+// https://facebook.github.io/react/docs/advanced-performance.html
