@@ -9,14 +9,14 @@ export let IntervalEnhance = ComponsedComponent => class extends Component {
   }
 
   componentDidMount = () => {
-    this.interval = setInterval(this.tick.bind(this), 1000);
+    this.interval = setInterval(this.tick, 1000);
   }
 
   componentWillUnmount = () => {
     clearInterval(this.interval);
   }
 
-  tick() {
+  tick = () => {
     this.setState({
       seconds: this.state.seconds + 1
     });

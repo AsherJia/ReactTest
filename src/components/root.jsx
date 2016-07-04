@@ -1,5 +1,6 @@
 import React from 'react';
 import CartItem from './cart-item.jsx';
+import UserManagerPanel from './user-manager-panel.jsx';
 
 const order = {
 	title: 'Fresh fruits package',
@@ -11,12 +12,15 @@ const order = {
 class Root extends React.Component {
 	render() {
 		return (
-			<CartItem
-				title={order.title}
-				image={order.image}
-				initalQty={order.initialQty}
-				price={order.price}
-			/>
+      <div>
+        <CartItem
+          title={order.title}
+          image={order.image}
+          initalQty={order.initialQty}
+          price={order.price}
+        />
+        <UserManagerPanel />
+      </div>
 		);
 	}
 }
