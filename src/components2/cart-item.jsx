@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { IntervalEnhance } from './interval-enhance.jsx';
 import Immutable from 'immutable';
+import _ from 'lodash';
 
 // @IntervalEnhance
 class CartItem extends Component {
@@ -26,21 +27,23 @@ class CartItem extends Component {
   }
 
   componentDidMount = () => {
-    var s1 = Immutable.Map({a:1, b:2});
+/*    var s1 = Immutable.Map({a:1, b:2});
     var s2 = s1.set('b', 20);
 
     console.error('s1: ', s1.toObject());
     console.error('s2: ', s2.toObject());
 
     var s3 = [1,2,3,4];
-    var s3Immutable =Immutable.fromJS(s3);
+    var s3Immutable = Immutable.fromJS(s3);
     console.error('s3Immutable: ', s3Immutable);
 
     var map1 = Immutable.Map({a:1, b:1, c:1});
     var map2 = Immutable.Map({a:1, b:1, c:1});
     console.error(map1 !== map2);
     console.error(Object.is(map1, map2) === false);
-    console.error(Immutable.is(map1, map2) === true);
+    console.error(Immutable.is(map1, map2) === true);*/
+
+
   }
 
   increaseQty = () => {

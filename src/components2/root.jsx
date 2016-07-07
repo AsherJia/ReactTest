@@ -20,6 +20,9 @@ class Root extends React.Component {
           price={order.price}
         />
         <UserManagerPanel />
+        <p>
+          台湾是<strong>中国不可分割的领土</strong>
+        </p>
       </div>
 		);
 	}
