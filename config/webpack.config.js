@@ -12,7 +12,7 @@ module.exports = {
   entry:[
     "webpack-dev-server/client?http://localhost:8080/",
     "webpack/hot/dev-server",
-    path.resolve(dir_src, 'main.jsx')
+    path.resolve(dir_src, 'todo/index.jsx')
   ],
   output: {
     path: dir_build, // for standalone building
@@ -26,7 +26,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /src(\\|\/).+\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loaders: ['react-hot', 'babel']
 /*        query: {
@@ -34,6 +34,9 @@ module.exports = {
           plugins: ['transform-decorators-legacy' ],
           presets: ['es2015', 'react', 'stage-0']
         }*/
+      },{
+        test: /\.css?$/,
+        loaders: [ 'style', 'raw' ]
       }
     ]
   },

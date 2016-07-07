@@ -8,8 +8,8 @@ const initialState = [
   }
 ]
 
-const todos = (state = initialState, action) => {
-  switch(action.type) {
+export default function todos(state = initialState, action) {
+  switch (action.type) {
     case ADD_TODO:
       return [
         {
@@ -45,7 +45,7 @@ const todos = (state = initialState, action) => {
 
     case CLEAR_COMPLETED:
       return state.filter(todo => todo.completed === false);
+    default:
+      return state
   }
 }
-
-export default todos;
